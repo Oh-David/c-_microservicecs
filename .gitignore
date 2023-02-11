@@ -1,0 +1,12 @@
+.vs
+/Mango.Services.ProductAPI/bin/*
+/Mango.Services.ProductAPI/obj/*
+/Mango.Web/bin/*
+/Mango.Web/obj/*
+
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
