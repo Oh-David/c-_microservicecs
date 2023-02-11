@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hUDqDiwwEEqZcHPnJ3/bX6L6Zf8gaodY2aQW/s6B61bhblj3fz+EGj8MCmW2uwOYKrnbBStoBiSNDie7QoSazQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\David Oh\\Desktop\\c_micro\\MangoRestaurant\\Mango.Web\\Mango.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\David Oh\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}
