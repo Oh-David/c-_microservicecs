@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mangoweb:
+    build:
+      context: .
+      dockerfile: Mango.Web/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - mangoservicesproductapi
+  mangoservicesproductapi:
+    build:
+      context: .
+      dockerfile: Mango.Services.ProductAPI/Dockerfile
+    ports:
+      - "5001:5001"
