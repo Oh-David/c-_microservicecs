@@ -11,3 +11,5 @@ bin
 obj
 packages
 /.vs/MangoRestaurant/v17/.suo
+
+Mango.Web/wwwroot/lib/*
