@@ -1,6 +1,7 @@
 .vs
 /Mango.Services.ProductAPI/bin/*
 /Mango.Services.ProductAPI/obj/*
+/Mango.Services.Identity/wwwroot/lib/*
 /Mango.Web/bin/*
 /Mango.Web/obj/*
 

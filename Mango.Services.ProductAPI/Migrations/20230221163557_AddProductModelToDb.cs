@@ -4,14 +4,26 @@
 
 namespace Mango.Services.ProductAPI.Migrations
 {
-    public partial class SeedProducts : Migration
+    public partial class AddProductModelToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "ProductName",
-                table: "Products",
-                newName: "Name");
+            migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    ProductId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<double>(type: "float", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CategoryName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.ProductId);
+                });
 
             migrationBuilder.InsertData(
                 table: "Products",
@@ -27,30 +39,8 @@ namespace Mango.Services.ProductAPI.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DeleteData(
-                table: "Products",
-                keyColumn: "ProductId",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Products",
-                keyColumn: "ProductId",
-                keyValue: 2);
-
-            migrationBuilder.DeleteData(
-                table: "Products",
-                keyColumn: "ProductId",
-                keyValue: 3);
-
-            migrationBuilder.DeleteData(
-                table: "Products",
-                keyColumn: "ProductId",
-                keyValue: 4);
-
-            migrationBuilder.RenameColumn(
-                name: "Name",
-                table: "Products",
-                newName: "ProductName");
+            migrationBuilder.DropTable(
+                name: "Products");
         }
     }
 }
