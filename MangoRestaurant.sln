@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.Identity", "Mango.Services.Identity\Mango.Services.Identity.csproj", "{4206E6CC-72FD-40AB-B9D0-3180F8D7B56A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{9829DFF6-AC6C-48F5-AF3A-D7EC86AEA44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9829DFF6-AC6C-48F5-AF3A-D7EC86AEA44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9829DFF6-AC6C-48F5-AF3A-D7EC86AEA44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4206E6CC-72FD-40AB-B9D0-3180F8D7B56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4206E6CC-72FD-40AB-B9D0-3180F8D7B56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4206E6CC-72FD-40AB-B9D0-3180F8D7B56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4206E6CC-72FD-40AB-B9D0-3180F8D7B56A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B1F4D8B7-BFEB-497A-BB77-4551331157EA} = {5C120CA8-474D-43F7-AC4F-28C39815101F}
 		{9829DFF6-AC6C-48F5-AF3A-D7EC86AEA44D} = {93D33893-1995-4A8C-B27B-2301BE06B619}
+		{4206E6CC-72FD-40AB-B9D0-3180F8D7B56A} = {93D33893-1995-4A8C-B27B-2301BE06B619}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF38955B-CC2C-4B55-865D-5C8A14673BCC}

@@ -1,6 +1,32 @@
+using Mango.Services.Identity;
+using Mango.Services.Identity.DbContext;
+using Mango.Services.Identity.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
+var build = builder.Services.AddIdentityServer(options =>
+{
+    options.Events.RaiseErrorEvents = true;
+    options.Events.RaiseInformationEvents = true;
+    options.Events.RaiseFailureEvents = true;
+    options.Events.RaiseSuccessEvents = true;
+    options.EmitStaticAudienceClaim = true;
+}).AddInMemoryIdentityResources(StaticDetails.IdentityResources)
+  .AddInMemoryApiScopes(StaticDetails.ApiScopes)
+  .AddInMemoryClients(StaticDetails.Clients);
+
+build.AddDeveloperSigningCredential();
+
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
